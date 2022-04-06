@@ -15,18 +15,16 @@ image_names = []
 
 # converts pdf to image 
 def pdf_to_image(pdfs, page_numbers):
-    global string_name
+    global name
     pages = convert_from_path(pdfs, 350)
-    name = pdfs.split('\\')
-    nameWithext = name[-1].split('.')
-    string_name = nameWithext[0]
+    name = pdfs.split('\\')[-1].split('.')[0]
 
     i = 1
 
     for page in pages:
         print('------------------------------------------')
         print('Creating jpg file...')
-        image_name = string_name + " Page_" + str(i) + ".jpg"  
+        image_name = name + " Page_" + str(i) + ".jpg"  
         page.save(image_name, "JPEG")
         i = i+1  
         image_names.append(image_name)
@@ -69,7 +67,7 @@ def combine_all_docx(files_list):
     for i in range(1, number_of_sections):
         doc_temp = Document(files_list[i])
         composer.append(doc_temp)
-    composer.save(f"{string_name}.docx")
+    composer.save(f"{name}.docx")
     delete_jpg_and_pdf(files_list, number_of_sections)
 
 # deletes jpgs and pdfs created earlier
