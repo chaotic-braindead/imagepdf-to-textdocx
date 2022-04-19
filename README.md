@@ -1,6 +1,6 @@
 <h1 align="center"> imagepdf-to-textdocx </h1>
 
-[![Python Version](https://img.shields.io/badge/Python-3.10.2-blue)](https://github.com/chaotic-braindead/file-sort)
+[![Python Version](https://img.shields.io/badge/Python-3.10.2-blue)](https://github.com/chaotic-braindead/imagepdf-to-textdocx)
 [![Download](https://img.shields.io/badge/Pre--release-v0.1-orange)](https://github.com/chaotic-braindead/imagepdf-to-textdocx/releases/download/v0.1/imagepdf-to-textdocx.exe)
 
 This script converts unselectable .pdf texts to .docx files. Maybe a program that does the same thing exists but idk.
